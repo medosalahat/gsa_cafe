@@ -101,8 +101,8 @@ class user_lib
 
         $data = array(
             $tbl_user->get_id_fb()=>$user['id'],
-            $tbl_user->get_birthday()=>$user['birthday'],
-            $tbl_user->get_email()=>$user['email'],
+           // $tbl_user->get_birthday()=>$user['birthday'],
+            //$tbl_user->get_email()=>$user['email'],
             $tbl_user->get_name()=>$user['name'],
             $tbl_user->get_image()=>'graph.facebook.com/'.$user['id'].'/picture',
             $tbl_user->get_level()=>4,
