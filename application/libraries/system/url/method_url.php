@@ -61,8 +61,11 @@ class method_url
 
         return $_GET[$this->index];
     }
+
     public function post(){
+
         return $_POST[$this->index];
+
     }
 
     public function is_set_method_post()
@@ -111,5 +114,10 @@ class method_url
     public function redirect_link(){
 
         redirect($this->index);
+    }
+
+    public function get_data_encode_md5($value = null){
+
+        return md5('GsA'.$value.'2015-12-7');
     }
 }

@@ -1,13 +1,15 @@
-<?php
-if (!defined('BASEPATH')) exit('No direct script access allowed');
-
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 class ses_system
 {
     private $CI ;
 
-    public function __construct()
+    private $data ;
+
+    public function __construct($data = null)
     {
         $this->CI = &get_instance();
+
+        $this->data = $data;
 
 
 
@@ -34,6 +36,55 @@ class ses_system
 
     }
 
+    public function set_is_login(){
+
+        $_SESSION["SYSTEM"] = true;
+    }
+
+    public function get_is_login(){
+
+        if(isset($_SESSION["SYSTEM"])){
+
+            if($_SESSION["SYSTEM"])
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+
+    }
+
+    public function set_id($id){
+
+        $_SESSION["id_user"] = $id;
+    }
+
+    public function get_id(){
+
+        if(isset($_SESSION["id_user"])){
+
+            return $_SESSION["id_user"];
+        }
+        else{
+            return false;
+        }
+
+
+    }
+
+    function unset_is_login()
+    {
+
+        $_SESSION["SYSTEM"] =false;
+
+    }
+
     public function set_id_user($id){
 
         $this->CI->session->set_userdata('id_fb',$id);
@@ -43,6 +94,13 @@ class ses_system
     public function get_id_user(){
 
         return $this->CI->session->userdata('id_fb');
+
+    }
+
+    function unset_is_id()
+    {
+
+        $this->CI->session->unset_userdata('id_fb');
 
     }
 

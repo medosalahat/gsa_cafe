@@ -39,4 +39,9 @@ class method_array
 
     }
 
+    public function array_empty($array = null){
+
+        return !empty($array);
+    }
+
 }

@@ -53,6 +53,7 @@ $autoload['packages'] = array();
 */
 
 $autoload['libraries'] = array(
+    'test_lib',
     'database',
     'facebook/facebook',
     'system/template/template',
@@ -70,10 +71,16 @@ $autoload['libraries'] = array(
     'system/tbl/tbl_system',
     'system/tbl/tbl_cafe',
     'system/tbl/tbl_cafe_gallery',
+    'system/tbl/tbl_cafe_serves',
     'system/tbl/tbl_cafe_comment',
     'system/tbl/tbl_users',
     'system/tbl/tbl_contact_us',
-    'system/url/method_url'
+    'system/url/method_url',
+    'system/template/template_admin',
+    'admin/template/render_admin',
+    'admin/template/template_admin_render',
+    'admin/users/function_user',
+
 );
 
 
@@ -140,6 +147,7 @@ $autoload['model'] = array(
     'cafe/validation_cafe',
     'blog/validation_blog',
     'contact/set_contact',
+    'admin/user/user_md',
 );
 
 

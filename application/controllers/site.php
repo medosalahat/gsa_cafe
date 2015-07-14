@@ -154,6 +154,7 @@ class Site extends CI_Controller
 
 
     }
+
     public function send_contact(){
 
         $lib = new contact_lib();
